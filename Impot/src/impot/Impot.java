@@ -49,7 +49,7 @@ public class Impot
 		double result = 0;
 		for (int i = 0 ; i < getNbTranches() ; i++)
 		{
-			revenu -= (getDebut(i) - ((i > 0)? getDebut(i-1): 0));
+			revenu -= (getDebut(i) - ((i > 0)? getDebut(i - 1): 0));
 			if (revenu > 0)
 				result += revenu * (getCoefficient(i) - 
 					((i > 0)? getCoefficient(i - 1): 0));
@@ -79,7 +79,7 @@ public class Impot
 		impot.setTranche(4, 70831, 0.41);
 		impot.setTranche(5, 150001, 0.45);
 		impot.setAbbatemment(0.1);
-		return impot;		
+		return impot;
 	}
 
 	public static void main(String[] args)
